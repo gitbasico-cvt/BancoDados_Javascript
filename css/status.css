@@ -1,0 +1,49 @@
+/* Indicador fixo no canto superior esquerdo */
+.status-conexao {
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    z-index: 1000;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+/* Ícone circular (bolinha) */
+.status-icone {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #dc2626; /* Padrão: vermelho (desconectado) */
+}
+
+/* Estado conectado: verde */
+.status-conexao.conectado {
+    border-color: #86efac;
+    background-color: #f0fdf4;
+    color: #166534;
+}
+
+.status-conexao.conectado .status-icone {
+    background-color: #16a34a;
+}
+
+/* Estado desconectado: vermelho */
+.status-conexao.desconectado {
+    border-color: #fca5a5;
+    background-color: #fef2f2;
+    color: #991b1b;
+}
+
+.status-conexao.desconectado .status-icone {
+    background-color: #dc2626;
+}
